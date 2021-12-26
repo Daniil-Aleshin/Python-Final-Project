@@ -2,7 +2,7 @@
 
 *It's simple game about D. Trump.*
 
-![](https://github.com/Daniil-Aleshin/final-project/blob/main/game%20images/game%201.PNG)
+![](https://github.com/Daniil-Aleshin/Python-Final-Project/blob/main/game%20images/game%201.PNG)
 
 press **UP** button for jump
 
