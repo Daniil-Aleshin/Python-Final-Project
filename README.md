@@ -53,5 +53,7 @@ while running:
 
 ### Project has done by:
 @Daniil-Aleshin;     *Daniil Aleshin*
+
 *Aiperi Aidarova*
+
 *Meerlan Tynarbekov*
