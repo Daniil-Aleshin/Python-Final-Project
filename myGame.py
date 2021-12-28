@@ -38,7 +38,7 @@ dead = 0
 
 
 class player(object):
-    def _init_(self, x, y, width, height):
+    def __init__(self, x, y, width, height):
         self.x = x
         self.y = y
         self.width = width
@@ -126,7 +126,7 @@ class enemy(object):
                 pygame.image.load('game images/L10E.png'),
                 pygame.image.load('game images/L11E.png')]
 
-    def _init_(self, x, y, width, height, end):
+    def __init__(self, x, y, width, height, end):
         self.x = x
         self.y = y
         self.width = width
