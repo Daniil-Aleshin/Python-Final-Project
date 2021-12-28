@@ -1,4 +1,5 @@
 import pygame
+from pygame.mixer import Sound
 
 pygame.init()
 
@@ -7,37 +8,37 @@ win = pygame.display.set_mode((500, 500))
 pygame.display.set_caption('final project')
 
 
-walkRight = [pygame.image.load('pygame_right_1.png'),
-             pygame.image.load('pygame_right_2.png'),
-             pygame.image.load('pygame_right_3.png'),
-             pygame.image.load('pygame_right_4.png'),
-             pygame.image.load('pygame_right_5.png'),
-             pygame.image.load('pygame_right_6.png')]
+walkRight = [pygame.image.load('game images/pygame_right_1.png'),
+             pygame.image.load('game images/pygame_right_2.png'),
+             pygame.image.load('game images/pygame_right_3.png'),
+             pygame.image.load('game images/pygame_right_4.png'),
+             pygame.image.load('game images/pygame_right_5.png'),
+             pygame.image.load('game images/pygame_right_6.png')]
 
-walkLeft = [pygame.image.load('pygame_left_1.png'),
-            pygame.image.load('pygame_left_2.png'),
-            pygame.image.load('pygame_left_3.png'),
-            pygame.image.load('pygame_left_4.png'),
-            pygame.image.load('pygame_left_5.png'),
-            pygame.image.load('pygame_left_6.png')]
+walkLeft = [pygame.image.load('game images/pygame_left_1.png'),
+            pygame.image.load('game images/pygame_left_2.png'),
+            pygame.image.load('game images/pygame_left_3.png'),
+            pygame.image.load('game images/pygame_left_4.png'),
+            pygame.image.load('game images/pygame_left_5.png'),
+            pygame.image.load('game images/pygame_left_6.png')]
 
-playerStand = pygame.image.load('pygame_idle.png')
-bg = pygame.image.load('pygame_bg.jpg')
+playerStand = pygame.image.load('game images/pygame_idle.png')
+bg = pygame.image.load('game images/pygame_bg.jpg')
 
 
 clock = pygame.time.Clock()
 
-bulletSound = pygame.mixer.Sound('bullet (online-audio-converter.com).wav')
-hitSound = pygame.mixer.Sound('hit (online-audio-converter.com).wav')
-pygame.mixer.music.load('music (online-audio-converter.com).wav')
-pygame.mixer.music.play()
+bulletSound: Sound = pygame.mixer.Sound('game images/bullet (online-audio-converter.com).wav')
+hitSound = pygame.mixer.Sound('game images/hit (online-audio-converter.com).wav')
+
+
 
 score = 0
 dead = 0
 
 
 class player(object):
-    def __init__(self, x, y, width, height):
+    def _init_(self, x, y, width, height):
         self.x = x
         self.y = y
         self.width = width
@@ -88,7 +89,7 @@ class player(object):
 
 
 class projectile(object):
-    def __init__(self, x, y, radius, color, facing):
+    def _init_(self, x, y, radius, color, facing):
         self.x = x
         self.y = y
         self.radius = radius
@@ -101,31 +102,31 @@ class projectile(object):
 
 
 class enemy(object):
-    walkRight = [pygame.image.load('R1E.png'),
-                 pygame.image.load('R2E.png'),
-                 pygame.image.load('R3E.png'),
-                 pygame.image.load('R4E.png'),
-                 pygame.image.load('R5E.png'),
-                 pygame.image.load('R6E.png'),
-                 pygame.image.load('R7E.png'),
-                 pygame.image.load('R8E.png'),
-                 pygame.image.load('R9E.png'),
-                 pygame.image.load('R10E.png'),
-                 pygame.image.load('R11E.png')]
+    walkRight = [pygame.image.load('game images/R1E.png'),
+                 pygame.image.load('game images/R2E.png'),
+                 pygame.image.load('game images/R3E.png'),
+                 pygame.image.load('game images/R4E.png'),
+                 pygame.image.load('game images/R5E.png'),
+                 pygame.image.load('game images/R6E.png'),
+                 pygame.image.load('game images/R7E.png'),
+                 pygame.image.load('game images/R8E.png'),
+                 pygame.image.load('game images/R9E.png'),
+                 pygame.image.load('game images/R10E.png'),
+                 pygame.image.load('game images/R11E.png')]
 
-    walkLeft = [pygame.image.load('L1E.png'),
-                pygame.image.load('L2E.png'),
-                pygame.image.load('L3E.png'),
-                pygame.image.load('L4E.png'),
-                pygame.image.load('L5E.png'),
-                pygame.image.load('L6E.png'),
-                pygame.image.load('L7E.png'),
-                pygame.image.load('L8E.png'),
-                pygame.image.load('L9E.png'),
-                pygame.image.load('L10E.png'),
-                pygame.image.load('L11E.png')]
+    walkLeft = [pygame.image.load('game images/L1E.png'),
+                pygame.image.load('game images/L2E.png'),
+                pygame.image.load('game images/L3E.png'),
+                pygame.image.load('game images/L4E.png'),
+                pygame.image.load('game images/L5E.png'),
+                pygame.image.load('game images/L6E.png'),
+                pygame.image.load('game images/L7E.png'),
+                pygame.image.load('game images/L8E.png'),
+                pygame.image.load('game images/L9E.png'),
+                pygame.image.load('game images/L10E.png'),
+                pygame.image.load('game images/L11E.png')]
 
-    def __init__(self, x, y, width, height, end):
+    def _init_(self, x, y, width, height, end):
         self.x = x
         self.y = y
         self.width = width
